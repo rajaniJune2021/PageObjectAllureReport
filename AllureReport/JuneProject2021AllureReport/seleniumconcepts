@@ -1,0 +1,66 @@
+1. Retry analyzer
+2. Logger class
+3. data provider
+4. reading data from excel file
+5. reading data from json file
+6. Keyboard actions
+7. Jenkin's
+8. Allure Reports
+9. Oops concepts implementing in the framework
+10. listeners in testng.
+
+
+----------------------------------------------
+
+DataProvider:
+DataProvider:
+1.DataProvider is stores the test data in columns and rows format.
+2return type of dataProvider method is two dimensional array with object since object store sthe any type of data.
+
+syntax:
+
+@DataProvider
+public Object[][] getTestData(){
+
+return Object[row][col];
+
+}
+Depends on the size of the two dimentional arrray test method will execute same number of times until complete test data iterated from the two diemntional array.
+
+------------------
+
+Actions in selenium:
+keyboard actions and mouse over actions.
+------------
+
+log4j levels
+
+log4j -5 levels:
+
+warn,info, debug, error, fatal: this is the sequential order of log4j level execute
+
+Error: this level will capture only errors, system level and code level
+info : code level message after run the testcase
+debug : it gives backend message gives complee trace of execution
+fatal: logs only errors which stops the execution.
+warn: any kind of warning, such as plugin's or file exceptions
+
+-------------------
+
+Retry analyzer:
+1. If test case fail execute it will re-execute the test case again until retry count max out.
+
+invocation count - after the @test if we specify invocation count those many times test case will execute.
+retry analyzer keyword also perform same way as invocation count method.
+
+Listeners:
+tenstNg listeners listens to the events happening the test case execution and executes the corresponding code.
+// retry analyzer - example- in this case testNG looks for fail event of test cases by using retry analyzer listeners and re-execute the particular piece of code until the given retry count max out.
+Example 1:  iTestListener, IAnnotationTransformer,IAlterSuiteListener
+//IAnnotationTransformer Hi Naresh
+interface this transform method  takes 4 parameters - that is Test Class name, that particular class constructor, testmethod name and test annotation of test suite.
+
+///Allure reports
+// Allure reports runs based on the @test annotation
+Integrates the connection between Test management tool and automation script with test case id number ( like example, Test rail integration with test ng to generate reports)
+//it will generate html reports converts into allure and extent reports with all UI components.
